@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning</title>
+    <link rel="stylesheet" href="index.css">
     <style>
         .rotate{
             transform: rotate(90deg);
@@ -15,6 +16,10 @@
     <h1>Hello World</h1>
     <h2>Hello World</h2>
     <h3>Hello World</h3>
+    <hr>
+
+    <!--------------Entities---------------->
+    <p>Hello, How are you? &lt;h1&gt;</p>
     <hr>
 
     <!----------------Bold, Italic, Small----------->
@@ -75,24 +80,44 @@
       <hr>
 
       <!-----------------Forms-------------->
-      <form>
+      <form class="payment">
         <h1>PAYMENT FORM</h1>
+        <hr>
 
-        <p>Name: <input type="text" name="name"></p>
-        <p>City: 
-        <select>
-            <option value="Delhi">Delhi</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="London">London</option>
-            <option value="Newyork">NewYork</option>
-        </select>
-        </p>
+        <h2>User Information</h2>
+        <h5>Required Fields are followed by *</h5>
+        <p>Name*: <input type="text" name="name" required></p>
         <p>Gender: 
             <input type="radio" name="gender" id="male">Male
             <input type="radio" name="gender" id="female">Female
         </p>
-        <p>Email: <input type="email"></p>
-        
+        <p>Email*: <input type="email" name="email" id="email" required></p>
+        <p>Date: <input type="date" name="date" id="date"></p>
+        <p>City: 
+            <select name="City" id="City">
+                <option value="">Select the city</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="London">London</option>
+                <option value="Newyork">NewYork</option>
+            </select>
+        </p>
+        <hr>
+
+        <h2>Payment Information</h2>
+        <p>Card Type:
+            <select name="card_type" id="card_type" required>
+              <option value="">Select Card Type</option>
+              <option value="Visa">Visa</option>
+              <option value="MasterCard">Master Card</option>
+              <option value="Rupay">Rupay</option>  
+            </select>
+        </p>
+        <p>Pincode: <input type="number" name="pincode" placeholder="123456"></p>
+        <p>Card Number: <input type="number" name="cardnumber" placeholder="1111-2222-3333-4444"></p>
+        </p>
+        <p>CVV: <input type="number" name="CVV" placeholder="123"></p>
+        <input type="submit" value="PayNow">
       </form>
       <hr>
 </body>
